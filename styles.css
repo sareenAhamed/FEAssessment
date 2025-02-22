@@ -161,6 +161,7 @@ body {
     background-color: white;
 }
 
+
 /* Section 4 */
 
 .section-4 {
@@ -172,8 +173,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    
+    overflow: hidden; 
 }
 
 .grid-layer-1 {
@@ -240,8 +240,9 @@ body {
     background: #ff3659;
 }
 
-/* Responsive */
 
+/* Responsive */
+/* Mobile phones */
 @media screen and (max-width: 480px) {
     .container {
         flex-direction: column;
@@ -315,6 +316,7 @@ body {
     }
 }
 
+/* Tablets and small devices */
 @media screen and (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -389,6 +391,7 @@ body {
     }
 }
 
+/* Tablets - portrait and landscape mode */
 @media screen and (max-width: 1024px) {
     .container {
         flex-direction: column;
