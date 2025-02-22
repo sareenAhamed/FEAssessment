@@ -15,10 +15,47 @@ body {
 /* Section 3 */
 
 .section-3 {
+    position: relative;
     width: 100%;
-    display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+
+.top-div {
+    height: 200px; /* Ensure this div takes up the 200px as required */
+    width: 100%;
+    overflow: hidden;
+}
+
+.top-div img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    opacity: 0.5;
+    filter: blur(15px);
+}
+
+.background-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: -1;
+    overflow: hidden;
+    padding-bottom: 480px;
+}
+
+.background-layer img {
+    width: 100%;
+    height: auto;
+    max-width: 1600px;
+    filter: blur(10px);
+    transform: translateX(-55%);
 }
 
 .container {
@@ -26,10 +63,9 @@ body {
     align-items: center;
     justify-content: space-between;
     max-width: 1440px;
-    border-radius: 10px;
-    padding: 40px;
-    margin: 50px 0;
     gap: 50px;
+    position: relative;
+    z-index: 1; 
 }
 
 .arrow-image {
@@ -48,7 +84,7 @@ body {
     max-width: 500px;
     background: white;
     padding: 30px 50px;
-    margin: 40px auto;
+    margin: 40px 50px;
     border-radius: 15px;
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15), 
                 0px 4px 6px rgba(0, 0, 0, 0.05);
@@ -115,6 +151,11 @@ body {
     margin-bottom: 15px;
 }
 
+.empty-div{
+    height: 200px; 
+    background-color: white;
+}
+
 @media screen and (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -163,6 +204,12 @@ body {
     .content-box p {
         font-size: 14px;
     }
+
+    .background-layer img {
+        filter: blur(8px); /* Reduce blur */
+        transform: translateX(0); /* Center the background for mobile */
+        width: 120%; /* Extend image width for better coverage */
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -178,6 +225,11 @@ body {
 
     .image-box {
         max-width: 80%;
+    }
+
+    .background-layer img {
+        filter: blur(10px); /* Reduce blur for smaller screens */
+        transform: translateX(-5%); /* Adjust position slightly */
     }
 }
 
