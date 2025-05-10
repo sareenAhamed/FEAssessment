@@ -1,3 +1,4 @@
+// Animation
 document.addEventListener("DOMContentLoaded", function () {
     const elements = document.querySelectorAll(".section-3, .section-4, .content-box, .image-box, .content-layer");
 
